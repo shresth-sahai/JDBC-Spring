@@ -11,7 +11,7 @@ public class EmployeeRepository {
 private JdbcTemplate jdbcTemplate;
 // create table
     public void createTable(){
-        String sql="CREATE TABLE IF NOT EXIST employees ("+
+        String sql="CREATE TABLE IF NOT EXISTS employees ("+
                 "id INT PRIMARY KEY," +
                 "name VARCHAR(50)," +
                 "department  VARCHAR(50)," +
@@ -43,8 +43,18 @@ private JdbcTemplate jdbcTemplate;
     }
 // delete
     public int deleteEmployee(int id){
-        String sql="DELETE * from employees WHERE id = ?";
+        String sql="DELETE from employees WHERE id = ?";
+
         return jdbcTemplate.update(sql,id);
     }
+    /*
+
+     public int deleteEmployee(int id){
+        db.insertOne({});
+        find
+        insert
+
+    }
+     */
 
 }

@@ -14,4 +14,13 @@ public class EmployeeRowMapper implements RowMapper<Employee> {
         );
     }
 }
-// sql friendly results are ppresent + extract columns values - > jdbc template
+// sql friendly results are present + extract columns values - > jdbc template
+
+
+
+
+
+
+
+
+
